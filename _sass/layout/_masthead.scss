@@ -54,20 +54,6 @@
   }
 }
 
-.masthead__inner-wrap {
-  display: flex;
-  align-items: center;
-}
-
-.masthead__menu {
-  margin-left: auto;
-}
-
-.masthead__menu ul {
-  display: flex;
-  gap: 1.5rem;
-}
-
 .masthead__menu-item {
   background-color: var(--global-bg-color);
   display: block;
