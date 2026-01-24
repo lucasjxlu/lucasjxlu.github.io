@@ -45,8 +45,15 @@
 }
 
 .masthead__menu {
-  display: flex;
-  justify-content: flex-end;
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .greedy-nav .visible-links {
+    margin-left: auto;
+    display: flex;
+  }
 
   ul {
     margin: 0;
