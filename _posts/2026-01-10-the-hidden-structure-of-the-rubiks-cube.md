@@ -27,11 +27,11 @@ I’ll assume you already have a basic, intuitive understanding of how a Rubik�
 
 The labels $R$, $L$, $U$, $D$, $B$, and $F$ stand for right, left, up, down, back, and front, respectively. Each label simply indicates which face of the cube is being turned, with each move representing a 90-degree rotation (as you can tell from the colors).
 
-The move labeled $E$ at the top is a special case: it represents *not turning the cube at all*. This may feel a bit strange —-- why include a move that doesn’t do anything? We’ll return to this question shortly.
+The move labeled $E$ at the top is a special case: it represents *not turning the cube at all*. This may feel a bit strange —- why include a move that doesn’t do anything? We’ll return to this question shortly.
 
-You might also wonder why only these seven moves appear here, when there are clearly many more “interesting” sequences of moves one could perform. After all, a standard 3 × 3 Rubik’s Cube has **43 quintillion** possible configurations —-- that’s 43,252,003,274,489,856,000 distinct states, an almost absurdly large number. Why, then, do we start with such a small and simple set of moves? The answer will become clear as we begin to build the theory step by step.
+You might also wonder why only these seven moves appear here, when there are clearly many more “interesting” sequences of moves one could perform. After all, a standard 3 × 3 Rubik’s Cube has **43 quintillion** possible configurations —- that’s 43,252,003,274,489,856,000 distinct states, an almost absurdly large number. Why, then, do we start with such a small and simple set of moves? The answer will become clear as we begin to build the theory step by step.
 
-If you’ve ever learned how to solve a Rubik’s Cube, you may remember following a collection of formulas —-- or *algorithms* --— for each step of the process. But have you ever stopped to ask why those formulas work? Or whether there are certain states of the cube --— in other words, certain permutations of its pieces --— that can never be reached by legal moves?
+If you’ve ever learned how to solve a Rubik’s Cube, you may remember following a collection of formulas —- or *algorithms* -- for each step of the process. But have you ever stopped to ask why those formulas work? Or whether there are certain states of the cube -- in other words, certain permutations of its pieces -- that can never be reached by legal moves?
 
 Answering questions like these requires mathematics.
 
@@ -39,4 +39,8 @@ To study operations on the cube, we first need a way to *represent* them. The go
 
 **We are ready to build a mathematical model for the Rubik’s cube!**
 
-The first thing we notice is that no matter how you combine these seven fundamental moves, the result is always *another valid operation on the Rubik’s Cube*. As long as you’re only turning faces —-- and not, say, smashing the cube apart —-- the cube remains a cube, and each sequence of moves simply transforms it from one state to another.
+The first thing we notice is that no matter how you combine these seven fundamental moves, the result is always *another valid operation on the Rubik’s Cube*. As long as you’re only turning faces —- and not, say, smashing the cube apart —- the cube remains a cube, and each sequence of moves simply transforms it from one state to another.
+
+This means the following: if we let $𝒪$ denote the collection of all possible operations on the cube (in math we call such a collection a set), then whenever $X$ and $Y$ are operations in $𝒪$, performing $X$ followed by $Y$ is still an operation in $𝒪$. Formally, we write:
+
+$$XY \in 𝒪 \text{ for all } X, Y \in 𝒪$$
