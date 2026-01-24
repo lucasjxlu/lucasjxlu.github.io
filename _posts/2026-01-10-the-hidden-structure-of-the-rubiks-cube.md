@@ -1,7 +1,7 @@
 ---
 title: 'The Hidden Structure of The Rubik’s Cube'
 subtitle: 'An Intuitive Introduction to Group Theory'
-date: Jan-10-2026
+date: 2026-01-10
 permalink: /blogs/abstractalgebra1/
 tags:
   - Mathematics
